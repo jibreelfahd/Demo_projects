@@ -1,0 +1,249 @@
+:root{
+   --primary-color: hsl(25, 100%, 55%);
+   --primary-color-2: hsl(25, 100%, 94%);
+   --overlay-color: rgba(24, 39, 51, 0.85);
+   --overlay-speed: 1s;
+   --body-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   --lg-font: 2.5rem;
+   --md-font: 1.1rem;
+   --sm-font: 0.9rem;
+   --font-weight: 400;
+   --primary-neutral: hsl(219, 9%, 45%);
+   --secondary-neutral: hsl(220, 14%, 75%);
+   --secondary-color: hsl(223, 64%, 98%);
+   --darkblue-color: hsl(220, 13%, 13%);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: var(--body-family);
+   line-height: 1.4;
+}
+
+/* Utility Classes */
+.container{
+   max-width: 960px;
+   margin: auto;
+   overflow: hidden;
+}
+
+/* Margin Top/Bottom */
+.my-10{ margin: 10px 0;}
+.my-20{ margin: 20px 0;}
+.my-30{ margin: 30px 0;}
+
+/* Padding Top/Bottom */
+.py-10{ padding: 10px 0;}
+.py-20{ padding: 20px 0;}
+.py-30{ padding: 30px 0;}
+
+.btn-light{
+   border: none;
+   background: var(--secondary-color);
+   padding: 0.55rem 0.7rem;
+   border-radius: 5px;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.btn-light:hover{
+   opacity: 0.75;
+}
+
+.btn-primary{
+   background: var(--primary-color);
+   color: #fff;
+   padding: 0.55rem 0.7rem;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: opacity 0.5s ease-in-out;  
+}
+
+.btn-primary:hover{
+   opacity: 0.75;
+}
+
+/* Menu Wrap */
+.menu-wrap{
+   display: none;
+}
+
+/* Navbar */
+#main-nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.5rem;
+   border-bottom: 1px solid var(--secondary-neutral);
+}
+
+#main-nav img{
+   margin-left: 1rem;
+}
+
+#main-nav .list {
+   display: flex;
+   margin-right: 35rem;
+}
+
+#main-nav ul li{
+   list-style-type: none;
+}
+
+#main-nav ul li a{
+   text-decoration: none;
+   margin: 0 0.7rem;
+   padding: 0.7rem;
+   color: var(--primary-neutral);
+}
+
+#main-nav ul li a:hover{
+   background-color: var(--primary-color);
+   color: var(--darkblue-color);
+   border-radius: 5px;
+   opacity: 0.75;
+}
+
+#main-nav .right-nav{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-right: 3rem;
+}
+
+#main-nav .right-nav .cart {
+   width: 38px;
+   cursor: pointer;
+   padding: 0.7rem;
+}
+
+#main-nav .right-nav .cart img{
+   color: #fff;
+}
+
+#main-nav .right-nav .avatar{
+   height: 40px;
+   cursor: pointer;
+   transition: border 0.2s ease-in-out;
+}
+
+#main-nav .right-nav .avatar:hover{
+   border: 2px solid var(--primary-color);
+   border-radius: 50%;
+}
+
+/* Showcase */
+#showcase {
+   display: flex;
+   margin-top: 7rem;
+}
+
+#showcase .showcase-content{
+   display: flex;
+}
+
+#showcase .showcase-content > img{
+   width: 37%;
+   border-radius: 10px;
+   margin-bottom: 0.6rem;
+}
+
+#showcase .showcase-content .showcase-right{
+   padding: 0 3.5rem;
+   margin: 2rem 3rem;
+   text-align: justify;
+}
+
+#showcase .showcase-content .showcase-right h3{
+   font-size: var(--sm-font);
+   color: var(--primary-color);
+   font-weight: var(--font-weight
+   );
+}
+
+#showcase .showcase-content .showcase-right h1{
+   font-size: var(--lg-font);
+   line-height: 1.1;
+   margin-bottom: 1rem;
+}
+
+#showcase .showcase-content .showcase-right > p{
+   font-size: var(--md-font);
+   line-height: 1.5;
+   color: var(--primary-neutral);
+}
+
+.showcase-right .price p{
+   display: inline;
+}
+
+.price .initial-price {
+   font-weight: bolder;
+   margin-right: 0.5rem;
+}
+
+.price .discount{
+   border: none;
+   border-radius:5px ;
+   background: var(--primary-color-2);
+   color: var(--primary-color);
+   padding: 0.3rem;
+   font-size: 0.8rem;
+}
+
+.previous-price{
+   color: var(--secondary-neutral);
+   text-decoration: line-through;
+}
+
+.item{
+   display: flex;
+   align-items: center;
+}
+
+.items{
+   display: flex;
+   align-items: center;
+   margin-right: 1rem;
+}
+
+.items img{
+   width: 10px;
+   cursor: pointer;
+}
+
+.items p{
+   margin: 0 1.5rem;
+   font-weight: bold;
+}
+
+.item-1{
+   display: flex;
+   align-items: center;
+   text-align: center;
+} 
+
+.item-1 img{
+   margin:0  0.5rem;
+   width: 13%;
+   color: #fff;
+}
+
+#showcase .showcase-bottom{
+   display: flex;
+   cursor: pointer;
+}
+
+#showcase .showcase-bottom img{
+   margin-right: 1rem;
+   width: 8%;
+   border-radius: 10px;
+}
+
+#showcase .showcase-bottom img:hover{
+   border: 2px solid var(--primary-color);
+}
